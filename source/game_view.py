@@ -145,7 +145,7 @@ class GameView(arcade.View):
             for target in targets_hit:
                 if colors_match(laser.get_color(), target.get_color()):
                     self.target_manager.remove_target(target)
-                    explosion = ExplosionMaker(self.window.get_size(), target.position)
+                    explosion = ExplosionMaker(self.window.get_size(), target.position, laser.get_color())
                     self.explosion_list.append(explosion)
                     self.score += 1
 
